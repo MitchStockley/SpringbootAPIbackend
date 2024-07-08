@@ -1,0 +1,54 @@
+The following are the API calls used in the app.
+
+User:
+Creates a new user
+Body: (username,password,email)
+-  http://localhost:8080/api/users
+
+User:
+Logs in a user
+Body: (username,password)
+-  http://localhost:8080/api/users/login
+
+User:
+Gets all users
+-  http://localhost:8080/api/users
+
+User:
+Gets a user by id
+-  http://localhost:8080/api/users/{id}
+
+User:
+Updates a user
+Body: (username,password,email)
+-  http://localhost:8080/api/users/{id} //add id to end of url
+
+User:
+Deletes a user
+-  http://localhost:8080/api/users/{id} //add id to end of url
+
+
+Courses:
+create a new course
+Body:(course_name, course_description)
+-  http://localhost:8080/api/courses
+
+Courses:
+get all courses
+-  http://localhost:8080/api/courses
+
+Courses:
+get a course by id
+-  http://localhost:8080/api/courses/{id}
+
+Courses:
+update a course
+Body:(course_name, course_description)
+-  http://localhost:8080/api/courses/{id}
+
+Courses:
+delete a course
+-  http://localhost:8080/api/courses/delete/{id}
+
+
+
