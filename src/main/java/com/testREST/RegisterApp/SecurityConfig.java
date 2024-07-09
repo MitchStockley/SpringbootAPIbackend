@@ -37,7 +37,7 @@ public class SecurityConfig implements WebMvcConfigurer {
     @Override
     public void addCorsMappings(CorsRegistry registry) {
         registry.addMapping("/**")
-                .allowedOrigins("https://musical-gelato-8ee559.netlify.app/") // Replace with your React app's URL
+                .allowedOrigins("https://effervescent-snickerdoodle-6d479b.netlify.app/") // Replace with your React app's URL
                 .allowedMethods("GET", "POST", "PUT", "DELETE")
                 .allowedHeaders("*");
     }
