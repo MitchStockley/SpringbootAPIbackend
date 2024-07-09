@@ -52,17 +52,9 @@ public class UserController {
     }
 
 
-//    @PostMapping("/users") // http://localhost:8081/api/users // creates a user
-//    public ResponseEntity<User> createUser(@RequestBody User user) {
-//        try {
-//            User _user = userRepository.save(new User(user.getUsername(), user.getPassword(), user.getEmail()));
-//            return new ResponseEntity<>(_user, HttpStatus.CREATED);
-//        } catch (Exception e) {
-//            return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
-//        }
-//    }
 
-    @PostMapping("/users") // http://localhost:8081/api/users // creates a user
+
+    @PostMapping("/users") // http://localhost:8080/api/users // creates a user
     public ResponseEntity<User> createUser(@RequestBody User user) {
         try {
             String encodedPassword = passwordEncoder.encode(user.getPassword());
@@ -74,7 +66,7 @@ public class UserController {
     }
 
 
-    @PutMapping("/users/{id}") // http://localhost:8081/api/users/1 // updates user by id
+    @PutMapping("/users/{id}") // http://localhost:8080/api/users/1 // updates user by id
     public ResponseEntity<User> updateUser(@PathVariable("id") Long id, @RequestBody User user) {
         Optional<User> userdata = userRepository.findById(id);
 
@@ -91,7 +83,7 @@ public class UserController {
     }
 
 
-    @DeleteMapping("/users/{id}") // http://localhost:8081/api/users/1 // deletes user by id
+    @DeleteMapping("/users/{id}") // http://localhost:8080/api/users/1 // deletes user by id
     public ResponseEntity<HttpStatus> deleteUser(@PathVariable("id") Long id) {
         try {
             userRepository.deleteById(id);
@@ -101,29 +93,6 @@ public class UserController {
         }
     }
 
-    //login user
-//    @PostMapping("/login")
-//    public ResponseEntity <User> loginUser(@RequestBody User user) {
-//
-//        try {
-//            if (userRepository.findByUsername(user.getUsername()) != null) {
-//                User _user = userRepository.findByUsername(user.getUsername());
-//                if (_user.getPassword().equals(user.getPassword())) {
-//
-//                    return new ResponseEntity<>(_user, HttpStatus.OK);
-//
-//                } else {
-//                    return new ResponseEntity<>(HttpStatus.UNAUTHORIZED);
-//                }
-//            } else {
-//                return new ResponseEntity<>(HttpStatus.NOT_FOUND);
-//            }
-//
-//
-//        } catch (Exception e) {
-//            throw new RuntimeException(e);
-//        }
-//    }
 
     @PostMapping("/login")
     public ResponseEntity<User> loginUser(@RequestBody User user) {

@@ -28,27 +28,7 @@ Deletes a user
 -  http://localhost:8080/api/users/{id} //add id to end of url
 
 
-Courses:
-create a new course
-Body:(course_name, course_description)
--  http://localhost:8080/api/courses
 
-Courses:
-get all courses
--  http://localhost:8080/api/courses
-
-Courses:
-get a course by id
--  http://localhost:8080/api/courses/{id}
-
-Courses:
-update a course
-Body:(course_name, course_description)
--  http://localhost:8080/api/courses/{id}
-
-Courses:
-delete a course
--  http://localhost:8080/api/courses/delete/{id}
 
 
 

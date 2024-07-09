@@ -18,13 +18,7 @@ public class User {
     @Column(name = "email", nullable = false, unique = true)
     private String email;
 
-//    @ManyToMany
-//    @JoinTable(
-//            name = "user_courses",
-//            joinColumns = @JoinColumn(name = "user_id"),
-//            inverseJoinColumns = @JoinColumn(name = "course_id")
-//    )
-//    private Set<Courses> enrolledCourses = new HashSet<>();
+
 
     public User() {
     }
