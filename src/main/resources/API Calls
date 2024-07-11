@@ -27,6 +27,45 @@ User:
 Deletes a user
 -  http://localhost:8080/api/users/{id} //add id to end of url
 
+GET /api/posts
+Retrieves a list of all blog posts.
+
+GET /api/posts/{id}
+Retrieves a specific blog post by its ID.
+
+POST /api/posts
+Creates a new blog post.
+Request Body (form-data):
+title (string)
+content (string)
+username (string)
+file (file, optional)
+PUT /api/posts/{id}
+
+Updates an existing blog post by its ID.
+Request Body (raw, JSON):
+{
+  "title": "Updated Title",
+  "content": "Updated Content",
+  "username": "UpdatedUsername",
+  "image": "Base64EncodedImageData"
+}
+
+DELETE /api/posts/{id}
+Deletes a blog post by its ID.
+
+POST /api/posts/{postId}/comments
+Creates a new comment for a specific blog post.
+Request Body (raw, JSON):
+{
+  "content": "This is a comment."
+}
+GET /api/posts/{postId}/comments
+Retrieves all comments for a specific blog post.
+Make sure to replace {id} and {postId} with the actual ID values in the URL when making requests.
+
+
+
 
 
 
